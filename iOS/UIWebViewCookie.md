@@ -6,6 +6,12 @@
 ###下面贴代码
 
 
+
+* 首先获取cookie并且保存其中`cookie.name`用来判断是否是你需要保存的cookie
+
+`- (void)webViewDidFinishLoad:(UIWebView *)webView`
+
+
 ```objectivec
 NSArray*nCookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]cookies];
     NSHTTPCookie*cookie;
@@ -23,5 +29,20 @@ NSArray*nCookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]cookies];
                 break;
             }
         }
+    }
+```
+
+* 在调用 UIWebView `loadRequest` 之前先设置好cookie
+
+```objectivec
+    NSArray*cookies =[[NSUserDefaults standardUserDefaults] objectForKey:@"cookies"];
+    if(cookies){
+        NSMutableDictionary*cookieProperties = [NSMutableDictionary dictionary];
+        [cookieProperties setObject:[cookies objectAtIndex:0]forKey:NSHTTPCookieName];
+        [cookieProperties setObject:[cookies objectAtIndex:1]forKey:NSHTTPCookieValue];
+        [cookieProperties setObject:[cookies objectAtIndex:3]forKey:NSHTTPCookieDomain];
+        [cookieProperties setObject:[cookies objectAtIndex:4]forKey:NSHTTPCookiePath];
+        NSHTTPCookie*cookieuser = [NSHTTPCookie cookieWithProperties:cookieProperties];
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage]setCookie:cookieuser];
     }
 ```
