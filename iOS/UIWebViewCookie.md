@@ -6,7 +6,7 @@
 ###下面贴代码
 
 
-```Object-C
+```objectivec
 NSArray*nCookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]cookies];
     NSHTTPCookie*cookie;
     for(id cookies in nCookies)
