@@ -5,10 +5,9 @@
 
 最近在搞京东开普勒项目，就那他们的sdk做例子吧。
 
-###  1.首先看一下京东的商品详情页   
- <img src="../image/Snip20170113_4.png" width=256 height=400/>      
- 	 
- <font color='#43BFC7'>这时候如果需要修改title怎么办呢。</font>   
+###  1.首先看一下京东的商品详情页，<font color='#43BFC7'>想要修改成右边那样 </font>  
+ <img src="../image/Snip20170113_4.png" width=256 height=400/>
+ <img src="../image/Snip20170113_13.png" width=256 height=400/> 	   
 
 ### 2.用ui断点调试看看，先运行，然后点击如图所示位置`Debug View Hierarchy`   
  <img src="../image/Snip20170113_2.png" width=326 height=100/> 
