@@ -5,6 +5,9 @@
 
 最近在搞京东开普勒项目，就那他们的sdk做例子吧。
 
+ * 1.首先看一下京东的商品详情页
+ 	![](https://github.com/wu736139669/wu736139669.github.io/blob/master/image/Snip20170113_4.png)
+
 po [UIViewController _printHierarchy]
 
 <UINavigationController 0x7fd3ba000e00>, state: appeared, view: <UILayoutContainerView 0x7fd3b8708cb0>
